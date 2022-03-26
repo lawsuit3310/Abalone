@@ -16,10 +16,15 @@ public class GameManager : MonoBehaviour
     string DeviceIdentifier; //플레이 환경에 따라 변하는 변수
 
     public Text Scoreboard;
+    public Image ScoreBackBoard;
+    public Image PaulseScreen;
     public double Gravity = 0.3;
     public double Score = 0.0;
+    public int BackboardScale = 100;
 
     public ObstacleController ObstaclecController;
+
+    private double Scale;
 
     private ManualResetEvent _shutdownEvent = new ManualResetEvent(false);
     private ManualResetEvent _pauseEvent = new ManualResetEvent(true);
@@ -70,6 +75,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         Scoreboard.text = string.Format("{0:0.##}", Score);
+        Scale = Score > 100 ? Math.Log10(Score) : Math.Log10(100);
+        ScoreBackBoard.rectTransform.sizeDelta = new Vector2(100 + (float)Scale * BackboardScale ,ScoreBackBoard.rectTransform.sizeDelta.y);
     }
 
     void UploadScore(int Score)
@@ -108,12 +115,14 @@ public class GameManager : MonoBehaviour
         {
             isGameStopped = true;
             Time.timeScale = 0;
+            PaulseScreen.enabled = true;
             _pauseEvent.Reset();
         }
         else
         {
             isGameStopped = false;
             Time.timeScale = 1;
+            PaulseScreen.enabled = false;
             _pauseEvent.Set();
         }
             

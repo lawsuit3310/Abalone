@@ -382,3 +382,6 @@ MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-database-unity-
 MilvusMirgan/Assets/Plugins/iOS/Firebase/libFirebaseCppAuth.a
 MilvusMirgan/Assets/Plugins/iOS/Firebase/libFirebaseCppDatabase.a
 *.prefab
+*.ttf
+*.mp3
+*.wav

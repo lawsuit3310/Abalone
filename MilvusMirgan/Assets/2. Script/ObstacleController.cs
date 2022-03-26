@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ObstacleController : MonoBehaviour
 {
-    Rigidbody2D rigid;
     public GameManager gameManager;
     public GameObject Obstacle;
     // Start is called before the first frame update
     void Start()
     {
-        rigid = GetComponent<Rigidbody2D>();
         CreateObstacle();
     }
 
@@ -19,18 +18,13 @@ public class ObstacleController : MonoBehaviour
     {
         
     }
-    public void GravityControll(double Degree)
-    {
-        if (Degree > 1 || Degree < 0)
-        {
-            Debug.Log("Error"); return;
-        }
-        rigid.gravityScale = (float)Degree;
-    }
+
     void CreateObstacle()
     {
         Instantiate(Obstacle);
-        Invoke("CreateObstacle", 1f);
+        float pulse = gameManager.Score > 80? 0.3f : Mathf.Sqrt(float.Parse("" + 10 / (gameManager.Score == 0 ? 1 : gameManager.Score) ));
+        Debug.Log(pulse);
+        Invoke("CreateObstacle", pulse);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
