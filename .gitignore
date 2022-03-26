@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -58,3 +58,293 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+MilvusMirgan/.vsconfig
+MilvusMirgan/Assets/Scenes.meta
+MilvusMirgan/Assets/Scenes/SampleScene.unity
+MilvusMirgan/Assets/Scenes/SampleScene.unity.meta
+MilvusMirgan/Packages/manifest.json
+MilvusMirgan/Packages/packages-lock.json
+MilvusMirgan/ProjectSettings/AudioManager.asset
+MilvusMirgan/ProjectSettings/ClusterInputManager.asset
+MilvusMirgan/ProjectSettings/DynamicsManager.asset
+MilvusMirgan/ProjectSettings/EditorBuildSettings.asset
+MilvusMirgan/ProjectSettings/EditorSettings.asset
+MilvusMirgan/ProjectSettings/GraphicsSettings.asset
+MilvusMirgan/ProjectSettings/InputManager.asset
+MilvusMirgan/ProjectSettings/NavMeshAreas.asset
+MilvusMirgan/ProjectSettings/NetworkManager.asset
+MilvusMirgan/ProjectSettings/PackageManagerSettings.asset
+MilvusMirgan/ProjectSettings/Physics2DSettings.asset
+MilvusMirgan/ProjectSettings/PresetManager.asset
+MilvusMirgan/ProjectSettings/ProjectSettings.asset
+MilvusMirgan/ProjectSettings/ProjectVersion.txt
+MilvusMirgan/ProjectSettings/QualitySettings.asset
+MilvusMirgan/ProjectSettings/TagManager.asset
+MilvusMirgan/ProjectSettings/TimeManager.asset
+MilvusMirgan/ProjectSettings/UnityConnectSettings.asset
+MilvusMirgan/ProjectSettings/VersionControlSettings.asset
+MilvusMirgan/ProjectSettings/VFXManager.asset
+MilvusMirgan/ProjectSettings/XRSettings.asset
+MilvusMirgan/UserSettings/EditorUserSettings.asset
+MilvusMirgan/Assets/1. Scenes.meta
+MilvusMirgan/Assets/1. Scenes/SampleScene.unity
+MilvusMirgan/Assets/1. Scenes/SampleScene.unity.meta
+MilvusMirgan/Assets/Editor Default Resources.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_analytics.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_analytics.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_analytics_dark.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_analytics_dark.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_auth.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_auth.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_auth_dark.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_auth_dark.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_cloud_messaging.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_cloud_messaging.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_cloud_messaging_dark.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_cloud_messaging_dark.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_config.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_config.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_config_dark.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_config_dark.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_crashlytics.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_crashlytics.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_crashlytics_dark.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_crashlytics_dark.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_database.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_database.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_database_dark.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_database_dark.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_dynamic_links.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_dynamic_links.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_dynamic_links_dark.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_dynamic_links_dark.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_functions.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_functions.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_functions_dark.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_functions_dark.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_storage.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_storage.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_storage_dark.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/fb_storage_dark.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/firebase_lockup.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/firebase_lockup.png.meta
+MilvusMirgan/Assets/Editor Default Resources/Firebase/firebase_lockup_dark.png
+MilvusMirgan/Assets/Editor Default Resources/Firebase/firebase_lockup_dark.png.meta
+MilvusMirgan/Assets/ExternalDependencyManager.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/1.2.169.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/1.2.169/Google.IOSResolver.dll
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/1.2.169/Google.IOSResolver.dll.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/1.2.169/Google.JarResolver.dll
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/1.2.169/Google.JarResolver.dll.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/1.2.169/Google.PackageManagerResolver.dll
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/1.2.169/Google.PackageManagerResolver.dll.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/1.2.169/Google.VersionHandlerImpl.dll
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/1.2.169/Google.VersionHandlerImpl.dll.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/CHANGELOG.md
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.169_manifest.txt
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.169_manifest.txt.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/LICENSE
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/LICENSE.meta
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/README.md
+MilvusMirgan/Assets/ExternalDependencyManager/Editor/README.md.meta
+MilvusMirgan/Assets/Firebase.meta
+MilvusMirgan/Assets/Firebase/Editor.meta
+MilvusMirgan/Assets/Firebase/Editor/AnalyticsDependencies.xml
+MilvusMirgan/Assets/Firebase/Editor/AnalyticsDependencies.xml.meta
+MilvusMirgan/Assets/Firebase/Editor/AppDependencies.xml
+MilvusMirgan/Assets/Firebase/Editor/AppDependencies.xml.meta
+MilvusMirgan/Assets/Firebase/Editor/Firebase.Editor.dll
+MilvusMirgan/Assets/Firebase/Editor/Firebase.Editor.dll.meta
+MilvusMirgan/Assets/Firebase/Editor/FirebaseAnalytics_version-8.8.0_manifest.txt
+MilvusMirgan/Assets/Firebase/Editor/FirebaseAnalytics_version-8.8.0_manifest.txt.meta
+MilvusMirgan/Assets/Firebase/Editor/generate_xml_from_google_services_json.exe
+MilvusMirgan/Assets/Firebase/Editor/generate_xml_from_google_services_json.exe.meta
+MilvusMirgan/Assets/Firebase/Editor/generate_xml_from_google_services_json.py
+MilvusMirgan/Assets/Firebase/Editor/generate_xml_from_google_services_json.py.meta
+MilvusMirgan/Assets/Firebase/Editor/network_request.exe
+MilvusMirgan/Assets/Firebase/Editor/network_request.exe.meta
+MilvusMirgan/Assets/Firebase/Editor/network_request.py
+MilvusMirgan/Assets/Firebase/Editor/network_request.py.meta
+MilvusMirgan/Assets/Firebase/m2repository.meta
+MilvusMirgan/Assets/Firebase/m2repository/com.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-analytics-unity.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/8.8.0.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/8.8.0/firebase-analytics-unity-8.8.0.pom
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/8.8.0/firebase-analytics-unity-8.8.0.pom.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/8.8.0/firebase-analytics-unity-8.8.0.srcaar
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/8.8.0/firebase-analytics-unity-8.8.0.srcaar.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/maven-metadata.xml
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/maven-metadata.xml.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/8.8.0.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/8.8.0/firebase-app-unity-8.8.0.pom
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/8.8.0/firebase-app-unity-8.8.0.pom.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/8.8.0/firebase-app-unity-8.8.0.srcaar
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/8.8.0/firebase-app-unity-8.8.0.srcaar.meta
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/maven-metadata.xml
+MilvusMirgan/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/maven-metadata.xml.meta
+MilvusMirgan/Assets/Firebase/Plugins.meta
+MilvusMirgan/Assets/Firebase/Plugins/Firebase.Analytics.dll
+MilvusMirgan/Assets/Firebase/Plugins/Firebase.Analytics.dll.meta
+MilvusMirgan/Assets/Firebase/Plugins/Firebase.App.dll
+MilvusMirgan/Assets/Firebase/Plugins/Firebase.App.dll.meta
+MilvusMirgan/Assets/Firebase/Plugins/Firebase.Platform.dll
+MilvusMirgan/Assets/Firebase/Plugins/Firebase.Platform.dll.meta
+MilvusMirgan/Assets/Firebase/Plugins/Firebase.TaskExtension.dll
+MilvusMirgan/Assets/Firebase/Plugins/Firebase.TaskExtension.dll.meta
+MilvusMirgan/Assets/Firebase/Plugins/Google.MiniJson.dll
+MilvusMirgan/Assets/Firebase/Plugins/Google.MiniJson.dll.meta
+MilvusMirgan/Assets/Firebase/Plugins/iOS.meta
+MilvusMirgan/Assets/Firebase/Plugins/iOS/Firebase.Analytics.dll
+MilvusMirgan/Assets/Firebase/Plugins/iOS/Firebase.Analytics.dll.meta
+MilvusMirgan/Assets/Firebase/Plugins/iOS/Firebase.App.dll
+MilvusMirgan/Assets/Firebase/Plugins/iOS/Firebase.App.dll.meta
+MilvusMirgan/Assets/Firebase/Plugins/x86_64.meta
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppAnalytics.bundle
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppAnalytics.bundle.meta
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppAnalytics.dll
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppAnalytics.dll.meta
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppAnalytics.so
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppAnalytics.so.meta
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_8_0.bundle
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_8_0.bundle.meta
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_8_0.dll
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_8_0.dll.meta
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_8_0.so
+MilvusMirgan/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_8_0.so.meta
+MilvusMirgan/Assets/google-services.json
+MilvusMirgan/Assets/google-services.json.meta
+MilvusMirgan/Assets/Parse.meta
+MilvusMirgan/Assets/Parse/Plugins.meta
+MilvusMirgan/Assets/Parse/Plugins/dotNet45.meta
+MilvusMirgan/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll
+MilvusMirgan/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll.meta
+MilvusMirgan/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll
+MilvusMirgan/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll.meta
+MilvusMirgan/Assets/Parse/Plugins/Unity.Compat.dll
+MilvusMirgan/Assets/Parse/Plugins/Unity.Compat.dll.meta
+MilvusMirgan/Assets/Parse/Plugins/Unity.Tasks.dll
+MilvusMirgan/Assets/Parse/Plugins/Unity.Tasks.dll.meta
+MilvusMirgan/Assets/Plugins.meta
+MilvusMirgan/Assets/Plugins/Android.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.annotation.annotation-1.1.0.jar
+MilvusMirgan/Assets/Plugins/Android/androidx.annotation.annotation-1.1.0.jar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.arch.core.core-common-2.0.0.jar
+MilvusMirgan/Assets/Plugins/Android/androidx.arch.core.core-common-2.0.0.jar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.arch.core.core-runtime-2.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.arch.core.core-runtime-2.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.collection.collection-1.0.0.jar
+MilvusMirgan/Assets/Plugins/Android/androidx.collection.collection-1.0.0.jar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.core.core-1.2.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.core.core-1.2.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.documentfile.documentfile-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.documentfile.documentfile-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.drawerlayout.drawerlayout-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.drawerlayout.drawerlayout-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.fragment.fragment-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.fragment.fragment-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.interpolator.interpolator-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.interpolator.interpolator-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.legacy.legacy-support-core-ui-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.legacy.legacy-support-core-ui-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.0.0.jar
+MilvusMirgan/Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.0.0.jar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.loader.loader-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.loader.loader-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.localbroadcastmanager.localbroadcastmanager-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.localbroadcastmanager.localbroadcastmanager-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.print.print-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.print.print-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.slidingpanelayout.slidingpanelayout-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.slidingpanelayout.slidingpanelayout-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-17.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-17.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-base-17.6.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-base-17.6.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.6.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.6.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-20.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-20.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-api-20.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-api-20.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-20.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-20.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-impl-20.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-impl-20.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-20.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-20.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-20.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-20.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-stats-17.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-stats-17.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.2.1.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.2.1.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-analytics-20.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-analytics-20.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-analytics-unity-8.8.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-analytics-unity-8.8.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-annotations-16.0.0.jar
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-annotations-16.0.0.jar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-app-unity-8.8.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-app-unity-8.8.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-common-20.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-common-20.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-components-17.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-components-17.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-installations-17.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-installations-17.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-installations-interop-17.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-installations-interop-17.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-measurement-connector-19.0.0.aar
+MilvusMirgan/Assets/Plugins/Android/com.google.firebase.firebase-measurement-connector-19.0.0.aar.meta
+MilvusMirgan/Assets/Plugins/Android/FirebaseApp.androidlib.meta
+MilvusMirgan/Assets/Plugins/Android/FirebaseApp.androidlib/AndroidManifest.xml
+MilvusMirgan/Assets/Plugins/Android/FirebaseApp.androidlib/AndroidManifest.xml.meta
+MilvusMirgan/Assets/Plugins/Android/FirebaseApp.androidlib/project.properties
+MilvusMirgan/Assets/Plugins/Android/FirebaseApp.androidlib/project.properties.meta
+MilvusMirgan/Assets/Plugins/Android/FirebaseApp.androidlib/res.meta
+MilvusMirgan/Assets/Plugins/Android/FirebaseApp.androidlib/res/values.meta
+MilvusMirgan/Assets/Plugins/Android/FirebaseApp.androidlib/res/values/google-services.xml
+MilvusMirgan/Assets/Plugins/Android/FirebaseApp.androidlib/res/values/google-services.xml.meta
+MilvusMirgan/Assets/Plugins/iOS.meta
+MilvusMirgan/Assets/Plugins/iOS/Firebase.meta
+MilvusMirgan/Assets/Plugins/iOS/Firebase/libFirebaseCppAnalytics.a
+MilvusMirgan/Assets/Plugins/iOS/Firebase/libFirebaseCppAnalytics.a.meta
+MilvusMirgan/Assets/Plugins/iOS/Firebase/libFirebaseCppApp.a
+MilvusMirgan/Assets/Plugins/iOS/Firebase/libFirebaseCppApp.a.meta
+MilvusMirgan/Assets/StreamingAssets.meta
+MilvusMirgan/Assets/StreamingAssets/google-services-desktop.json
+MilvusMirgan/Assets/StreamingAssets/google-services-desktop.json.meta
+MilvusMirgan/ProjectSettings/AndroidResolverDependencies.xml
+MilvusMirgan/ProjectSettings/GvhProjectSettings.xml
