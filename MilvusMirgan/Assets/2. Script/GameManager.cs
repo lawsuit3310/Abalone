@@ -11,6 +11,7 @@ using System.Threading;
 
 public class GameManager : MonoBehaviour
 {
+    #region Variable
     FirebaseApp app;
     DatabaseReference m_Reference;
     string DeviceIdentifier; //플레이 환경에 따라 변하는 변수
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     public double Gravity = 0.3;
     public double Score = 0.0;
     public int BackboardScale = 100;
+    public AudioSource BGMManger;
 
     public ObstacleController ObstaclecController;
 
@@ -33,7 +35,8 @@ public class GameManager : MonoBehaviour
     private List<Thread> ThreadHandler = new List<Thread>();
 
     bool isGameStopped = false;
-
+    #endregion
+    
     private void Awake()
     {
         #region 공부필요
@@ -105,7 +108,7 @@ public class GameManager : MonoBehaviour
         {
             thr.Abort();
         }
-        
+        BGMManger.Stop();
         Debug.Log("GameOver");
     }
 

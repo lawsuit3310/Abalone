@@ -385,3 +385,8 @@ MilvusMirgan/Assets/Plugins/iOS/Firebase/libFirebaseCppDatabase.a
 *.ttf
 *.mp3
 *.wav
+*.pdf
+*.mat
+*.png
+*.asmref
+*.inputactions
