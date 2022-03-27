@@ -5,14 +5,22 @@ using UnityEngine;
 public class PlayerControll : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+
+    Transform trans;
+    Rigidbody2D rigid;
+    private void Awake()
     {
-        
+        trans = GetComponent<Transform>();
+        rigid = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if(trans.position.y != -2)
+            trans.position = new Vector2(trans.position.x, -2);
+        if (trans.position.x < -8.2f)
+            trans.position = new Vector2(-8.2f, trans.position.y);
+        else if (trans.position.x > 8.2f)
+            trans.position = new Vector2(8.2f, trans.position.y);
     }
 }

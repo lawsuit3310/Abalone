@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
 
     private double Scale;
 
-    private ManualResetEvent _shutdownEvent = new ManualResetEvent(false);
     private ManualResetEvent _pauseEvent = new ManualResetEvent(true);
 
     private Thread ScoreIncreaser;

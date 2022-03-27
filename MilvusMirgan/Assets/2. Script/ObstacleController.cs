@@ -27,8 +27,5 @@ public class ObstacleController : MonoBehaviour
         Invoke("CreateObstacle", pulse);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-     
-    }
+
 }
