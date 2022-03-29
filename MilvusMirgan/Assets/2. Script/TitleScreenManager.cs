@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor.SceneManagement;
 
 public class TitleScreenManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject[] NetWrkErr;
     public Text startMsg;
+    [SerializeField] LoadingSceneController LoadingSceneController;
     void Start()
     {
         EnableObject(NetWrkErr,false);
@@ -27,7 +29,8 @@ public class TitleScreenManager : MonoBehaviour
         }
         else //연결 되었을 때
         {
-
+            LoadingSceneController.LoadScene("Game");
+            
         }
     }
 
