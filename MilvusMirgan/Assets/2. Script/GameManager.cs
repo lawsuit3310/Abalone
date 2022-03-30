@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0;
         foreach (Thread thr in ThreadHandler)
         {
             thr.Abort();

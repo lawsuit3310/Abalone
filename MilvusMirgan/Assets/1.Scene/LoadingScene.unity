@@ -352,9 +352,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   images:
-  - {fileID: 652032541}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 52ad061a97bdd0f42ba9cbf0b9a6fbc3, type: 3}
+  - {fileID: 21300000, guid: 7ce2766f7acec6b448996182aaf81dc7, type: 3}
+  - {fileID: 21300000, guid: 14affb7f4fde9674ea518e052c05959d, type: 3}
+  - {fileID: 21300000, guid: 8c6e08322c155ee4bb1695b46412dd89, type: 3}
   LoadingMsg: {fileID: 553105997}
+  Dancer: {fileID: 652032541}
 --- !u!1 &553105995
 GameObject:
   m_ObjectHideFlags: 0
