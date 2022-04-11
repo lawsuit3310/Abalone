@@ -59,7 +59,6 @@ public class JoyStick : MonoBehaviour
     public void DragEnd()
     {
         moveFlag = false;
-        Debug.Log("true");
         Stick.position = StickFirstPos; // 스틱을 원래의 위치로.
         JoyVec = Vector2.zero;          // 방향을 0으로.
     }

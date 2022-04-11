@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     string DeviceIdentifier; //플레이 환경에 따라 변하는 변수
 
     public Text Scoreboard;
+    public Text UserName;
+    public Text UserScore;
     public Image ScoreBackBoard;
     public Image PaulseScreen;
     public double Gravity = 0.3;
@@ -25,6 +27,8 @@ public class GameManager : MonoBehaviour
     public AudioSource BGMManger;
 
     public ObstacleController ObstaclecController;
+
+    public GameObject LeaderBoard;
 
     private double Scale;
 
@@ -67,11 +71,14 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        LeaderBoard.SetActive(false);
         Debug.Log(DeviceIdentifier);
         ScoreIncreaser = new Thread(AddScore);
         ScoreIncreaser.IsBackground = true;
         ThreadHandler.Add(ScoreIncreaser);
         ScoreIncreaser.Start();
+        UserName = null;
+        UserScore = null;
     }
 
     void Update()
@@ -109,7 +116,82 @@ public class GameManager : MonoBehaviour
             thr.Abort();
         }
         BGMManger.Stop();
+        LeaderBoard.SetActive(true);
+        SendResult();                                                       
+        
         Debug.Log("GameOver");
+    }
+
+    private void SendResult()
+    {
+            m_Reference.Child("Result").Child(SystemInfo.deviceName).GetValueAsync().ContinueWithOnMainThread(task =>
+            {
+                if (task.IsFaulted)
+                {
+                    Debug.Log($"do not have references {SystemInfo.deviceName}");
+                }
+
+                else
+                {
+                    DataSnapshot dataSnapshot = task.Result;
+
+                    if (Convert.ToDouble(dataSnapshot.Child("Score").GetValue(true)) >= Score) //현재 데이터 베이스에 있는 점수가 현재 점수와 같거나 더 큰 경우
+                    {
+                        CreateLeaderBoard();
+                        return;
+                    }
+                }
+
+                m_Reference.Child("Result").Child(SystemInfo.deviceName).Child("Score").SetValueAsync(Score);
+                CreateLeaderBoard();
+            });
+        
+    }
+
+    private void CreateLeaderBoard()
+    {
+        FirebaseDatabase.DefaultInstance.GetReference("Result").GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.IsFaulted)
+            {
+                Debug.Log("Err! Couldn't get References from firebase!");
+            }
+            else if (task.IsCompleted) //파이어 베이스에서 값 가져와서 저장
+            {
+                DataSnapshot snapshot = task.Result;
+
+                List<double> Scores = new List<double>();
+                List<string> Names = new List<string>();
+                foreach (DataSnapshot data in snapshot.Children)
+                {
+                    Names.Add(data.Key);
+                    Scores.Add(Convert.ToDouble(data.Child("Score").GetValue(true)));
+                }
+                Scores.Sort(); //오름차순 정렬
+                Scores.Reverse(); //오름차순으로 정렬된걸 뒤집음(내림차순 정렬)
+
+                Debug.Log(true);
+
+                for (int i = 0; i<1; i++)
+                    //UserName = GameObject.FindGameObjectsWithTag("USERNAMESPACE")[i]; 캔버스에 있는 오브젝트 찾는 기능 구현 바람  --04-11--
+                
+                UserName.text = "aaaaaaaaaaaaaa";
+                UserScore.text = " ";
+                for (int i = 0; i<10; i++)
+                {
+                    try
+                    {
+                        UserName.text += $"{Names[i]}\n";
+                        UserScore.text += $"{Scores[i]}\n";
+                    }
+                    catch
+                    {
+                        break;
+                    }
+                }
+            }
+        });
+        UserScore.text += "";
     }
 
     public void PaulseBtnOnClick()
@@ -130,4 +212,5 @@ public class GameManager : MonoBehaviour
         }
             
     }
+
 }
