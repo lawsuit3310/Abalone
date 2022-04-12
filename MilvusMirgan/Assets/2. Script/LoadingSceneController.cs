@@ -45,6 +45,7 @@ public class LoadingSceneController : MonoBehaviour
 
     void GoNextScene()
     {
+        Debug.Log(true);
         op.allowSceneActivation = true;
     }
 

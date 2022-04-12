@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using Firebase;
 using Firebase.Analytics;
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
     public Text UserScore;
     public Image ScoreBackBoard;
     public Image PaulseScreen;
+    public Image Continue;
     public double Gravity = 0.3;
     public double Score = 0.0;
     public int BackboardScale = 100;
@@ -72,6 +75,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         LeaderBoard.SetActive(false);
+        Continue.gameObject.SetActive(false);
         Debug.Log(DeviceIdentifier);
         ScoreIncreaser = new Thread(AddScore);
         ScoreIncreaser.IsBackground = true;
@@ -86,14 +90,6 @@ public class GameManager : MonoBehaviour
         Scoreboard.text = string.Format("{0:0.##}", Score);
         Scale = Score > 100 ? Math.Log10(Score) : Math.Log10(100);
         ScoreBackBoard.rectTransform.sizeDelta = new Vector2(100 + (float)Scale * BackboardScale ,ScoreBackBoard.rectTransform.sizeDelta.y);
-    }
-
-    void UploadScore(int Score)
-    {
-        if (DeviceIdentifier != null)
-            m_Reference.Child(DeviceIdentifier).Child("Score").SetValueAsync(Score + "");
-        else
-            m_Reference.Child("Guest").Child("Score").SetValueAsync(Score+"");
     }
     void AddScore()
     {
@@ -118,8 +114,6 @@ public class GameManager : MonoBehaviour
         BGMManger.Stop();
         LeaderBoard.SetActive(true);
         SendResult();                                                       
-        
-        Debug.Log("GameOver");
     }
 
     private void SendResult()
@@ -159,39 +153,33 @@ public class GameManager : MonoBehaviour
             else if (task.IsCompleted) //파이어 베이스에서 값 가져와서 저장
             {
                 DataSnapshot snapshot = task.Result;
-
-                List<double> Scores = new List<double>();
-                List<string> Names = new List<string>();
+                Dictionary<string, double> results = new Dictionary<string, double>(); 
                 foreach (DataSnapshot data in snapshot.Children)
                 {
-                    Names.Add(data.Key);
-                    Scores.Add(Convert.ToDouble(data.Child("Score").GetValue(true)));
+                    results.Add(data.Key, Convert.ToDouble(data.Child("Score").GetValue(true)));
                 }
-                Scores.Sort(); //오름차순 정렬
-                Scores.Reverse(); //오름차순으로 정렬된걸 뒤집음(내림차순 정렬)
 
-                Debug.Log(true);
-
-                for (int i = 0; i<1; i++)
-                    //UserName = GameObject.FindGameObjectsWithTag("USERNAMESPACE")[i]; 캔버스에 있는 오브젝트 찾는 기능 구현 바람  --04-11--
+                List<KeyValuePair<string,double>> tempValue = results.OrderByDescending(x => x.Value).ToList(); //내림차순 정렬
+                results = tempValue.ToDictionary(x => x.Key, x => x.Value);
                 
-                UserName.text = "aaaaaaaaaaaaaa";
-                UserScore.text = " ";
-                for (int i = 0; i<10; i++)
+                tempValue = null;
+
+                for (int i = 0; i < 1; i++) //캔버스에 있는 오브젝트 찾는 기능 구현 바람  --04-11--
                 {
-                    try
-                    {
-                        UserName.text += $"{Names[i]}\n";
-                        UserScore.text += $"{Scores[i]}\n";
-                    }
-                    catch
-                    {
-                        break;
-                    }
+                    UserName = GameObject.FindGameObjectsWithTag("USERNAMESPACE")[i].GetComponent<Text>();
+                    UserScore = GameObject.FindGameObjectsWithTag("USERSCORESPACE")[i].GetComponent<Text>();
+                }
+                
+                UserName.text = " ";
+                UserScore.text = " ";
+                foreach (KeyValuePair<string,double> x in results)
+                {
+                    UserName.text += $"{x.Key}\n";
+                    UserScore.text += $"{x.Value:0.0.##}\n";
                 }
             }
         });
-        UserScore.text += "";
+        Continue.gameObject.SetActive(true);
     }
 
     public void PaulseBtnOnClick()
@@ -211,6 +199,13 @@ public class GameManager : MonoBehaviour
             _pauseEvent.Set();
         }
             
+    }
+
+    public void WhenContinueClicked()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//현재 씬 다시 불러옴
+
+        //버그 수정 바람--0412--
     }
 
 }
