@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    AudioSource AudioSource;
+    public AudioSource AudioSource;
     private void Start()
     {
         AudioSource = GetComponent<AudioSource>();

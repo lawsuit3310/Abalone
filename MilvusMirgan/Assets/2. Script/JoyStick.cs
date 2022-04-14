@@ -31,7 +31,7 @@ public class JoyStick : MonoBehaviour
     private void Update()
     {
         if (moveFlag)
-            Player.transform.Translate(0.7f * JoyVec * Time.deltaTime * 10f);
+            Player.transform.Translate(Mathf.Abs(JoyVec.x) > 0.5f ?  0.7f * JoyVec * Time.deltaTime * 10f : 0.25f * JoyVec * Time.deltaTime * 10f);
     }
 
     // µå·¡±×

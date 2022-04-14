@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using System;
 
@@ -10,7 +11,7 @@ public class ObstacleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CreateObstacle();
+        Invoke("CreateObstacle", 0.2f);
     }
 
     // Update is called once per frame
@@ -19,12 +20,21 @@ public class ObstacleController : MonoBehaviour
         
     }
 
-    void CreateObstacle()
+    public void CreateObstacle()
     {
+        CancelInvoke("CreateObstacle");
         Instantiate(Obstacle);
-        float pulse = gameManager.Score > 80? 0.3f : Mathf.Sqrt(float.Parse("" + 10 / (gameManager.Score == 0 ? 1 : gameManager.Score) ));
-        Debug.Log(pulse);
+        float pulse = gameManager.Score > 80? 0.25f : Mathf.Sqrt(float.Parse("" + 10 / (gameManager.Score == 0 ? 1 : gameManager.Score) ));
         Invoke("CreateObstacle", pulse);
+    }
+
+    public void ClearObstacle()
+    {
+        CancelInvoke("CreateObstacle");
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("OBSTACLE"))
+        {
+            Destroy(obj);
+        }
     }
 
 

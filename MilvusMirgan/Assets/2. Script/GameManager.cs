@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     private Thread ScoreIncreaser;
     private List<Thread> ThreadHandler = new List<Thread>();
+    private List<GameObject> NotShowFirst = new List<GameObject>();
 
     bool isGameStopped = false;
     #endregion
@@ -68,19 +69,21 @@ public class GameManager : MonoBehaviour
         });*/
         #endregion
 
-        m_Reference = FirebaseDatabase.DefaultInstance.RootReference;
-        DeviceIdentifier = SystemInfo.deviceUniqueIdentifier;
-
     }
     void Start()
     {
+        m_Reference = FirebaseDatabase.DefaultInstance.RootReference;
+        DeviceIdentifier = SystemInfo.deviceUniqueIdentifier;
+        NotShowFirst.Add(LeaderBoard);
         LeaderBoard.SetActive(false);
+        NotShowFirst.Add(Continue.gameObject);
         Continue.gameObject.SetActive(false);
-        Debug.Log(DeviceIdentifier);
+        ScoreIncreaser = null;
         ScoreIncreaser = new Thread(AddScore);
         ScoreIncreaser.IsBackground = true;
         ThreadHandler.Add(ScoreIncreaser);
         ScoreIncreaser.Start();
+        Score = 0.0d;
         UserName = null;
         UserScore = null;
     }
@@ -174,12 +177,15 @@ public class GameManager : MonoBehaviour
                 UserScore.text = " ";
                 foreach (KeyValuePair<string,double> x in results)
                 {
-                    UserName.text += $"{x.Key}\n";
+                    string temp = (x.Key.Length > 13 ? x.Key.Substring(0, 12) + "..." : x.Key);
+                    UserName.text += $"{temp}\n";
                     UserScore.text += $"{x.Value:0.0.##}\n";
                 }
             }
         });
         Continue.gameObject.SetActive(true);
+        Score = 0.0d;
+        Scoreboard.text = ""+Score;
     }
 
     public void PaulseBtnOnClick()
@@ -203,8 +209,21 @@ public class GameManager : MonoBehaviour
 
     public void WhenContinueClicked()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//현재 씬 다시 불러옴
-
+        foreach (GameObject x in NotShowFirst)
+        {
+            x.SetActive(false);
+        }
+        Score = 0.0d;
+        Time.timeScale = 1;
+        BGMManger.Play(0);
+        ObstaclecController.ClearObstacle();
+        ObstaclecController.CreateObstacle();
+        ScoreIncreaser = new Thread(AddScore);
+        ScoreIncreaser.IsBackground = true;
+        ThreadHandler.Add(ScoreIncreaser);
+        ScoreIncreaser.Start();
+        UserName = null;
+        UserScore = null;
         //버그 수정 바람--0412--
     }
 

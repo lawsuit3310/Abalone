@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,7 +17,7 @@ public class LoadingSceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LoadScene());
+        StartCoroutine("LoadScene");
 
         DuringWait();
     }
@@ -38,15 +39,18 @@ public class LoadingSceneController : MonoBehaviour
             yield return null;
             Debug.Log(op.progress);
             if (op.progress >= 0.9f)
-                Invoke("GoNextScene",1f);
+            {
+                Thread.Sleep(1000);
+                GoNextScene();
+            }
         }
         yield break;
     }
 
     void GoNextScene()
     {
-        Debug.Log(true);
         op.allowSceneActivation = true;
+        CancelInvoke("GoNextScene");
     }
 
     void DuringWait()
